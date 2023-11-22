@@ -1,4 +1,4 @@
-import './index.css'
+import './form.css'
 
 
 import plan from './../../assets/map-pin-dynamic-gradient.png'
