@@ -1,4 +1,52 @@
-.icon {
-  width: 6rem;
-  height: 6rem;
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;500;600;700&family=Nosifer&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300;400;700&display=swap");
+
+.form-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.form_add-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  /* color: #0d0e0f; */
+  /* margin: 2rem; */
+  /* padding: 2rem; */
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Averia Sans Libre", sans-serif;
+  /* font-family: "Nosifer", sans-serif; */
+  font-size: 2rem;
+  text-transform: capitalize;
+  /* font-weight: 100; */
+  background-color: #070808;
+  border-radius: 2rem;
+  box-shadow: 0 60px 80px rgb(180, 114, 14), 0 45px 26px rgba(156, 42, 42, 0.14);
+}
+
+.form_add-inputs {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form_add-select,
+.form_add-input,
+.form_add-btn {
+  margin: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #070808;
+  background-color: #cdd0a1;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.form_add-btn {
+  background-color: #0000ae;
+  color: #e4fafa;
 }
