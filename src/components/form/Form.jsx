@@ -45,4 +45,4 @@ setQuantity(1)
 
 export default Form
 
-// Todo: STATE, EVENTS, AND FORMS
+// Todo: CHAPTER 7
