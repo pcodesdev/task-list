@@ -4,10 +4,13 @@ import './form.css'
 import plan from './../../assets/map-pin-dynamic-gradient.png'
 import { useState } from 'react'
 
-function Form() {
+function Form({onAddTasks}) {
 
   const [description, setDescription] = useState("")
   const [quantity, setQuantity] = useState(1)
+  // create new state to hold the two variables above
+  
+ 
   // form submit
   function handleSubmit(e){
 e.preventDefault()
@@ -21,6 +24,7 @@ const newTask = {
   id: Date.now(),
 }
 console.log(newTask)
+onAddTasks(newTask)
 
 setDescription('')
 setQuantity(1)
@@ -43,6 +47,6 @@ setQuantity(1)
   )
 }
 
-export default Form
+export default Form 
 
-// Todo: CHAPTER 7
+// Todo: Reviewing Lifting Up State - Reviewing Chapter 7

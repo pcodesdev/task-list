@@ -25,6 +25,10 @@
   font-weight: 100;
 }
 
+.list_items > h3 {
+  color: #fff;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +43,7 @@
 .item_list {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  color: #0d0e0f;
+  color: #fff;
 }
 
 .close-btn {

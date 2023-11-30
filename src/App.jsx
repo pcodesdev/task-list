@@ -1,4 +1,4 @@
-import  { useCallback } from 'react';
+import  { useCallback, useState } from 'react';
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import './App.css';
@@ -16,6 +16,12 @@ import './index.css'
 
 
 function App() {
+  // lifting the state up
+  const [tasks, setTasks] = useState([])
+
+  function handleAddTasks(item){
+    setTasks(items => [...items, item])
+  }
   const particlesInit = useCallback(main => {
       loadFull(main);
   }, [])
@@ -28,8 +34,8 @@ function App() {
     <div className="App_header">
     <Navbar/>
     <Stats/>
-    <Form/>
-    <TaskList/>
+    <Form onAddTasks={handleAddTasks}/>
+    <TaskList tasks={tasks}/>
     <Footer/>
     </div>
     </div>
