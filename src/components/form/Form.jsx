@@ -1,15 +1,21 @@
+import { motion } from 'framer-motion';
+
 import './form.css'
+import useSound from 'use-sound';
 
 
 import plan from './../../assets/map-pin-dynamic-gradient.png'
+import deleteSound from './../../assets/archivo.mp3'
 import { useState } from 'react'
 
-function Form({onAddTasks}) {
+function Form({onAddTasks, onClearTasks}) {
+
+  const [playHoverSound] = useSound(deleteSound, { volume: 0.5 });
 
   const [description, setDescription] = useState("")
   const [quantity, setQuantity] = useState(1)
   // create new state to hold the two variables above
-  
+  // Note: React is all about immutability
  
   // form submit
   function handleSubmit(e){
@@ -42,6 +48,15 @@ setQuantity(1)
         </select>
         <input className='form_add-input' type="text" placeholder='Task...' value={description} onChange={(e) => setDescription(e.target.value)}/>
         <button className='form_add-btn'>Add</button>
+
+        <motion.div
+          whileHover={{ scale: 1.2, transition: { duration: 0.2, ease: 'easeInOut' } }}
+          onMouseEnter={() => playHoverSound()}
+          onMouseDown={playHoverSound.stop}
+        >
+
+        <button onClick={onClearTasks} className='form_add-btn' style={{backgroundColor: '#710400'}}>Clear All Tasks</button>
+  </motion.div>
         </div>
     </form>
   )
@@ -49,4 +64,4 @@ setQuantity(1)
 
 export default Form 
 
-// Todo: Reviewing Lifting Up State - Reviewing Chapter 7
+// Todo: Updating an item complete immutable data operations
