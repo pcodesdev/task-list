@@ -48,6 +48,28 @@ useEffect(() => {
     localStorage.setItem('myTasks', JSON.stringify(persistedTasks.filter(task => task.id !== id)));
   };
 
+  function handleToggleTask(id) {
+    // Update tasks state
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
+      )
+    );
+  
+    // Find the task to be updated in persistedTasks
+    const taskIndex = persistedTasks.findIndex((task) => task.id === id);
+  
+    // Update the task in persistedTasks
+    if (taskIndex !== -1) {
+      const updatedTask = { ...persistedTasks[taskIndex], done: !persistedTasks[taskIndex].done };
+      persistedTasks[taskIndex] = updatedTask;
+    }
+  
+    // Update local storage
+    localStorage.setItem('myTasks', JSON.stringify(persistedTasks));
+  }
+  
+
   // Clear Local Storage
   const handleClearTasks = () => {
     setTasks([]);
@@ -71,7 +93,7 @@ useEffect(() => {
     <Stats/>
     {/* passing function as a prop */}
     <Form onAddTasks={handleAddTasks} onClearTasks={handleClearTasks}/>
-    <TaskList tasks={tasks} onDeleteTask={handleDeleteTask}/>
+    <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} onTaggleTask={handleToggleTask}/>
     <Footer/>
     </div>
     </div>
@@ -79,3 +101,5 @@ useEffect(() => {
 }
 
 export default App
+
+// Todo: Derived State

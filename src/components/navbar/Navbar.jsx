@@ -9,7 +9,7 @@ import logo from './../../assets/tool-dynamic-color.png';
 import pingSound from './../../assets/ping.mp3';
 
 function Navbar() {
-  const [playHoverSound] = useSound(pingSound, { volume: 0.5 });
+  const [playHoverSound] = useSound(pingSound, { volume: 0.3 });
 
   return (
     <nav className="navbar">
@@ -17,7 +17,7 @@ function Navbar() {
         <motion.div
           whileHover={{ scale: 1.2, transition: { duration: 0.2, ease: 'easeInOut' } }}
           onMouseEnter={() => playHoverSound()}
-          onMouseLeave={playHoverSound.stop}
+          onMouseMove={playHoverSound.stop}
         >
           <img className='logo' src={logo} alt="logo" />
         </motion.div>

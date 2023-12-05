@@ -46,6 +46,22 @@
   color: #fff;
 }
 
+.task-control {
+  margin: 0rem 1rem;
+  width: 15px;
+  height: 15px;
+  transform: scale(2);
+}
+
+.checked {
+  background-color: #99cc33;
+}
+
+input[type="checkbox"].checked {
+  background-color: #99dd99;
+  /* Add any styles for the checked state */
+}
+
 .close-btn {
   margin: 0rem 1rem;
   size: 2rem;

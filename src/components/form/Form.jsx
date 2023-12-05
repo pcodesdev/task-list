@@ -5,7 +5,7 @@ import useSound from 'use-sound';
 
 
 import plan from './../../assets/map-pin-dynamic-gradient.png'
-import deleteSound from './../../assets/archivo.mp3'
+import deleteSound from './../../assets/pick.mp3'
 import { useState } from 'react'
 
 function Form({onAddTasks, onClearTasks}) {
@@ -64,4 +64,3 @@ setQuantity(1)
 
 export default Form 
 
-// Todo: Updating an item complete immutable data operations
