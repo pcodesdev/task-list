@@ -11,7 +11,8 @@ function TaskList({ tasks, onDeleteTask, onTaggleTask}) {
     
       <ul className='list'>
         {tasks.map((task) => (
-          <Item task={task} onDeleteTask={onDeleteTask} onTaggleTask={onTaggleTask} key={task.id} />
+          <Item task={task} onDeleteTask={onDeleteTask} onTaggleTask={onTaggleTask}
+          key={task.id} />
         ))}
       </ul>
     </div>

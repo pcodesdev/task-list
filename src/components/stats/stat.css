@@ -1,4 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300;400;700&display=swap");
+
+.stats-description {
+  font-family: "Averia Sans Libre", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.stats-completed {
+  font-family: "Averia Sans Libre", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: linear-gradient(291deg, #5a3e2b 0%, #710400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats-decoration {
+  color: rgb(113, 4, 0);
+  /* background-color: #fff;
+  padding: 0.2rem; */
+  border-radius: o.4rem;
+}
+
 .icon {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
 }

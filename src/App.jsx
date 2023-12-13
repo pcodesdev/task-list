@@ -19,6 +19,8 @@ function App() {
   // lifting the state up to the first common parent component to both the Form and TaskList Components
   // In react we have only one way dataflow. Data can only flow from the parent component to the child components
   const [tasks, setTasks] = useState([])
+  // // calculate the number of tasks
+  // const numberOfTasks = tasks.length
   // persisting user input data using localStorage
   const [persistedTasks, setPersistedTasks] = useState([]);
 
@@ -90,7 +92,7 @@ useEffect(() => {
     {/* import React from 'react' */}
     <div className="App_header">
     <Navbar />
-    <Stats/>
+    <Stats tasks={tasks}/>
     {/* passing function as a prop */}
     <Form onAddTasks={handleAddTasks} onClearTasks={handleClearTasks}/>
     <TaskList tasks={tasks} onDeleteTask={handleDeleteTask} onTaggleTask={handleToggleTask}/>
@@ -102,4 +104,4 @@ useEffect(() => {
 
 export default App
 
-// Todo: Derived State
+// Todo: Sorting Items

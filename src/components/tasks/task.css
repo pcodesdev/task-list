@@ -53,11 +53,7 @@
   transform: scale(2);
 }
 
-.checked {
-  background-color: #99cc33;
-}
-
-input[type="checkbox"].checked {
+.task-control:active {
   background-color: #99dd99;
   /* Add any styles for the checked state */
 }
