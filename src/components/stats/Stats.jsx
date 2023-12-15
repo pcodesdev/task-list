@@ -1,7 +1,7 @@
 import './stat.css'
 
 import stat from './../../assets/target-dynamic-gradient.png'
-import trophy from './../../assets/trophy-dynamic-premium.png'
+import trophy from './../../assets/medal-dynamic-color.png'
 import addTask from './../../assets/forward-dynamic-color.png'
 
 function Stats({tasks}) {

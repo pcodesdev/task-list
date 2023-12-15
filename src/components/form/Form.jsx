@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion';
 
 import './form.css'
-import useSound from 'use-sound';
+
 
 
 import plan from './../../assets/map-pin-dynamic-gradient.png'
-import deleteSound from './../../assets/pick.mp3'
 import { useState } from 'react'
 
 function Form({onAddTasks, onClearTasks}) {
 
-  const [playHoverSound] = useSound(deleteSound, { volume: 0.5 });
+
 
   const [description, setDescription] = useState("")
   const [quantity, setQuantity] = useState(1)
@@ -51,8 +50,7 @@ setQuantity(1)
 
         <motion.div
           whileHover={{ scale: 1.2, transition: { duration: 0.2, ease: 'easeInOut' } }}
-          onMouseEnter={() => playHoverSound()}
-          onMouseDown={playHoverSound.stop}
+         
         >
 
         <button onClick={onClearTasks} className='form_add-btn' style={{backgroundColor: '#710400'}}>Clear All Tasks</button>

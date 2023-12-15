@@ -74,7 +74,8 @@ useEffect(() => {
 
   // Clear Local Storage
   const handleClearTasks = () => {
-    setTasks([]);
+    const confirmed = window.confirm('Are you sure you want to clear all tasks')
+    if(confirmed) setTasks([]);
     setPersistedTasks([]);
     localStorage.removeItem('myTasks');
   };
@@ -104,4 +105,4 @@ useEffect(() => {
 
 export default App
 
-// Todo: Sorting Items
+// Todo: Accordion Component

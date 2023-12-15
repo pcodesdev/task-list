@@ -9,6 +9,7 @@
 
 .form_add-item {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -49,4 +50,21 @@
 .form_add-btn {
   background-color: #0000ae;
   color: #e4fafa;
+}
+
+@media screen and (max-width: 768px) {
+  .form_add-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-icon {
+    width: 3rem;
+  }
+
+  .form_add-item {
+    font-size: 1.5rem;
+  }
 }
