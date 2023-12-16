@@ -28,7 +28,7 @@ const newTask = {
   done: false,
   id: Date.now(),
 }
-console.log(newTask)
+// console.log(newTask)
 onAddTasks(newTask)
 
 setDescription('')
